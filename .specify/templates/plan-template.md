@@ -31,7 +31,14 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Verify compliance with all constitution principles:
+
+- **Code Quality**: Does this feature require new dependencies? Are they justified? Will code pass ESLint/Prettier/Stylelint? Is TypeScript typing complete? Are pre-commit hooks configured? Is code organized correctly in monorepo structure (apps/ vs packages/)? Do package dependencies use workspace protocol?
+- **Testing Standards**: What unit tests are required? What E2E tests are needed for user journeys? Are test files properly named and structured? Will tests run via Turbo in monorepo context?
+- **UX Consistency**: Does this feature maintain design system consistency? Is i18n required? Are accessibility standards met? Is responsive design considered? If affecting multiple apps, is consistency maintained across UI framework variants?
+- **Performance**: What performance impact does this feature have? Are bundle size implications considered? Is lazy loading needed? Are there memory leak risks? Are Turbo build dependencies correctly declared? Is code splitting implemented?
+
+**Status**: [ ] All checks passed | [ ] Violations justified in Complexity Tracking section below
 
 ## Project Structure
 
