@@ -524,7 +524,6 @@ overrides:
   esbuild: 0.25.3
   pinia: ^3.0.3
   vue: ^3.5.24
-  jiti: ^2.6.1
 
 importers:
 
@@ -835,76 +834,6 @@ importers:
       vue-router:
         specifier: 'catalog:'
         version: 4.6.3(vue@3.5.24(typescript@5.9.3))
-
-  apps/web-tdesign:
-    dependencies:
-      '@vben/access':
-        specifier: workspace:*
-        version: link:../../packages/effects/access
-      '@vben/common-ui':
-        specifier: workspace:*
-        version: link:../../packages/effects/common-ui
-      '@vben/constants':
-        specifier: workspace:*
-        version: link:../../packages/constants
-      '@vben/hooks':
-        specifier: workspace:*
-        version: link:../../packages/effects/hooks
-      '@vben/icons':
-        specifier: workspace:*
-        version: link:../../packages/icons
-      '@vben/layouts':
-        specifier: workspace:*
-        version: link:../../packages/effects/layouts
-      '@vben/locales':
-        specifier: workspace:*
-        version: link:../../packages/locales
-      '@vben/plugins':
-        specifier: workspace:*
-        version: link:../../packages/effects/plugins
-      '@vben/preferences':
-        specifier: workspace:*
-        version: link:../../packages/preferences
-      '@vben/request':
-        specifier: workspace:*
-        version: link:../../packages/effects/request
-      '@vben/stores':
-        specifier: workspace:*
-        version: link:../../packages/stores
-      '@vben/styles':
-        specifier: workspace:*
-        version: link:../../packages/styles
-      '@vben/types':
-        specifier: workspace:*
-        version: link:../../packages/types
-      '@vben/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
-      '@vueuse/core':
-        specifier: 'catalog:'
-        version: 13.9.0(vue@3.5.24(typescript@5.9.3))
-      dayjs:
-        specifier: 'catalog:'
-        version: 1.11.19
-      es-toolkit:
-        specifier: 'catalog:'
-        version: 1.41.0
-      pinia:
-        specifier: ^3.0.3
-        version: 3.0.4(typescript@5.9.3)(vue@3.5.24(typescript@5.9.3))
-      tdesign-vue-next:
-        specifier: ^1.17.1
-        version: 1.17.2(vue@3.5.24(typescript@5.9.3))
-      vue:
-        specifier: ^3.5.24
-        version: 3.5.24(typescript@5.9.3)
-      vue-router:
-        specifier: 'catalog:'
-        version: 4.6.3(vue@3.5.24(typescript@5.9.3))
-    devDependencies:
-      '@types/lodash-es':
-        specifier: ^4.17.12
-        version: 4.17.12
 
   docs:
     dependencies:
@@ -4638,17 +4567,11 @@ packages:
   '@types/sortablejs@1.15.9':
     resolution: {integrity: sha512-7HP+rZGE2p886PKV9c9OJzLBI6BBJu1O7lJGYnPyG3fS4/duUCcngkNCjsLwIMV+WMqANe3tt4irrXHSIe68OQ==}
 
-  '@types/tinycolor2@1.4.6':
-    resolution: {integrity: sha512-iEN8J0BoMnsWBqjVbWH/c0G0Hh7O21lpR2/+PrvAVgWdzL7eexIFm4JN/Wn10PTcmNdtS6U67r499mlWMXOxNw==}
-
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
-
-  '@types/validator@13.15.4':
-    resolution: {integrity: sha512-LSFfpSnJJY9wbC0LQxgvfb+ynbHftFo0tMsFOl/J4wexLnYMmDSPaj2ZyDv3TkfL1UePxPrxOWJfbiRS8mQv7A==}
 
   '@types/web-bluetooth@0.0.16':
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
@@ -6658,7 +6581,7 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
     peerDependencies:
-      jiti: ^2.6.1
+      jiti: '*'
     peerDependenciesMeta:
       jiti:
         optional: true
@@ -7570,6 +7493,10 @@ packages:
   jake@10.9.4:
     resolution: {integrity: sha512-wpHYzhxiVQL+IV05BLE2Xn34zW1S223hvjtqk0+gsPrwd/8JNLXJgZZM/iPFsYc1xyphF+6M6EvdE5E9MBGkDA==}
     engines: {node: '>=10'}
+    hasBin: true
+
+  jiti@1.21.7:
+    resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
     hasBin: true
 
   jiti@2.6.1:
@@ -8773,7 +8700,7 @@ packages:
     resolution: {integrity: sha512-oPtTM4oerL+UXmx+93ytZVN82RrlY/wPUV8IeDxFrzIjXOLF1pN+EmKPLbubvKHT2HC20xXsCAH2Z+CKV6Oz/g==}
     engines: {node: '>= 18'}
     peerDependencies:
-      jiti: ^2.6.1
+      jiti: '>=1.21.0'
       postcss: '>=8.0.9'
       tsx: ^4.8.1
       yaml: ^2.4.2
@@ -9971,17 +9898,6 @@ packages:
     resolution: {integrity: sha512-7NyxrTE4Anh8km8iEy7o0QYPs+0JKBTj5ZaqHg6B39erLg0qYXN3BijtShwbsNSvQ+LN75+KV+C4QR/f6Gwnpg==}
     engines: {node: '>=18'}
 
-  tdesign-icons-vue-next@0.4.1:
-    resolution: {integrity: sha512-uDPuTLRORnGcTyVGNoentNaK4V+ZcBmhYwcY3KqDaQQ5rrPeLMxu0ZVmgOEf0JtF2QZiqAxY7vodNEiLUdoRKA==}
-    peerDependencies:
-      vue: ^3.5.24
-
-  tdesign-vue-next@1.17.2:
-    resolution: {integrity: sha512-nTofPSKGQguOS+Lb62fDiLS1Rs3Ngzb8rE8sPEjfMdDjdFZ5kEUgvVp+J+8GKfgwVRAZRjv//qSzZVt6cqgXxA==}
-    engines: {node: '>= 18'}
-    peerDependencies:
-      vue: ^3.5.24
-
   temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
     engines: {node: '>=8'}
@@ -10028,9 +9944,6 @@ packages:
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
-
-  tinycolor2@1.6.0:
-    resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
 
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
@@ -10403,10 +10316,6 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  validator@13.15.20:
-    resolution: {integrity: sha512-KxPOq3V2LmfQPP4eqf3Mq/zrT0Dqp2Vmx2Bn285LwVahLc+CsxOM0crBHczm8ijlcjZ0Q5Xd6LW3z3odTPnlrw==}
-    engines: {node: '>= 0.10'}
-
   vdirs@0.1.8:
     resolution: {integrity: sha512-H9V1zGRLQZg9b+GdMk8MXDN2Lva0zx72MPahDKc30v+DtwKjfyOSXWRIX4t2mhDubM1H09gPhWeth/BJWPHGUw==}
     peerDependencies:
@@ -10525,7 +10434,7 @@ packages:
     hasBin: true
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
-      jiti: ^2.6.1
+      jiti: '>=1.21.0'
       less: ^4.0.0
       lightningcss: ^1.21.0
       sass: ^1.70.0
@@ -13954,13 +13863,9 @@ snapshots:
 
   '@types/sortablejs@1.15.9': {}
 
-  '@types/tinycolor2@1.4.6': {}
-
   '@types/trusted-types@2.0.7': {}
 
   '@types/unist@3.0.3': {}
-
-  '@types/validator@13.15.4': {}
 
   '@types/web-bluetooth@0.0.16': {}
 
@@ -17221,6 +17126,8 @@ snapshots:
       filelist: 1.0.4
       picocolors: 1.1.1
 
+  jiti@1.21.7: {}
+
   jiti@2.6.1: {}
 
   jju@1.4.0: {}
@@ -17728,7 +17635,7 @@ snapshots:
       cssnano: 7.1.2(postcss@8.5.6)
       defu: 6.1.4
       esbuild: 0.25.3
-      jiti: 2.6.1
+      jiti: 1.21.7
       mlly: 1.8.0
       pathe: 2.0.3
       pkg-types: 2.3.0
@@ -18457,11 +18364,11 @@ snapshots:
       '@csstools/utilities': 2.0.0(postcss@8.5.6)
       postcss: 8.5.6
 
-  postcss-load-config@6.0.1(jiti@2.6.1)(postcss@8.5.6)(yaml@2.8.1):
+  postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.6)(yaml@2.8.1):
     dependencies:
       lilconfig: 3.1.3
     optionalDependencies:
-      jiti: 2.6.1
+      jiti: 1.21.7
       postcss: 8.5.6
       yaml: 2.8.1
 
@@ -19752,7 +19659,7 @@ snapshots:
       fast-glob: 3.3.3
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 2.6.1
+      jiti: 1.21.7
       lilconfig: 3.1.3
       micromatch: 4.0.8
       normalize-path: 3.0.0
@@ -19761,7 +19668,7 @@ snapshots:
       postcss: 8.5.6
       postcss-import: 15.1.0(postcss@8.5.6)
       postcss-js: 4.1.0(postcss@8.5.6)
-      postcss-load-config: 6.0.1(jiti@2.6.1)(postcss@8.5.6)(yaml@2.8.1)
+      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.6)(yaml@2.8.1)
       postcss-nested: 6.2.0(postcss@8.5.6)
       postcss-selector-parser: 6.1.2
       resolve: 1.22.11
@@ -19788,28 +19695,6 @@ snapshots:
       minipass: 7.1.2
       minizlib: 3.1.0
       yallist: 5.0.0
-
-  tdesign-icons-vue-next@0.4.1(vue@3.5.24(typescript@5.9.3)):
-    dependencies:
-      '@babel/runtime': 7.28.4
-      vue: 3.5.24(typescript@5.9.3)
-
-  tdesign-vue-next@1.17.2(vue@3.5.24(typescript@5.9.3)):
-    dependencies:
-      '@babel/runtime': 7.28.4
-      '@popperjs/core': 2.11.8
-      '@types/lodash-es': 4.17.12
-      '@types/sortablejs': 1.15.9
-      '@types/tinycolor2': 1.4.6
-      '@types/validator': 13.15.4
-      dayjs: 1.11.19
-      lodash-es: 4.17.21
-      mitt: 3.0.1
-      sortablejs: 1.15.6
-      tdesign-icons-vue-next: 0.4.1(vue@3.5.24(typescript@5.9.3))
-      tinycolor2: 1.6.0
-      validator: 13.15.20
-      vue: 3.5.24(typescript@5.9.3)
 
   temp-dir@2.0.0: {}
 
@@ -19854,8 +19739,6 @@ snapshots:
   tiny-emitter@2.1.0: {}
 
   tinybench@2.9.0: {}
-
-  tinycolor2@1.6.0: {}
 
   tinyexec@0.3.2: {}
 
@@ -20248,8 +20131,6 @@ snapshots:
       punycode: 2.3.1
 
   util-deprecate@1.0.2: {}
-
-  validator@13.15.20: {}
 
   vdirs@0.1.8(vue@3.5.24(typescript@5.9.3)):
     dependencies:
