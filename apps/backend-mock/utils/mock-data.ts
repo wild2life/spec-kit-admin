@@ -87,6 +87,47 @@ const dashboardMenus = [
   },
 ];
 
+const manufactureMenus = [
+  {
+    meta: {
+      icon: 'lucide:factory',
+      order: 100,
+      title: '生产质量',
+    },
+    name: 'Manufacture',
+    path: '/manufacture',
+    children: [
+      {
+        meta: {
+          icon: 'lucide:database',
+          title: '生产质量数据',
+        },
+        name: 'BaseData',
+        path: '/baseData',
+        children: [
+          {
+            meta: {
+              title: 'manufacture.bom.title',
+            },
+            name: 'SqeSupplierBom',
+            path: '/sqe_supplier_bom',
+            component: '/manufacture/baseData/sqe-supplier-bom/index',
+          },
+          {
+            meta: {
+              title: 'manufacture.material.title',
+            },
+            name: 'SupplierProMaterialData',
+            path: '/supplier_pro_material_data',
+            component:
+              '/manufacture/baseData/supplier-pro-material-data/index',
+          },
+        ],
+      },
+    ],
+  },
+];
+
 const createDemosMenus = (role: 'admin' | 'super' | 'user') => {
   const roleWithMenus = {
     admin: {
@@ -178,15 +219,27 @@ const createDemosMenus = (role: 'admin' | 'super' | 'user') => {
 
 export const MOCK_MENUS = [
   {
-    menus: [...dashboardMenus, ...createDemosMenus('super')],
+    menus: [
+      ...dashboardMenus,
+      ...manufactureMenus,
+      ...createDemosMenus('super'),
+    ],
     username: 'vben',
   },
   {
-    menus: [...dashboardMenus, ...createDemosMenus('admin')],
+    menus: [
+      ...dashboardMenus,
+      ...manufactureMenus,
+      ...createDemosMenus('admin'),
+    ],
     username: 'admin',
   },
   {
-    menus: [...dashboardMenus, ...createDemosMenus('user')],
+    menus: [
+      ...dashboardMenus,
+      ...manufactureMenus,
+      ...createDemosMenus('user'),
+    ],
     username: 'jack',
   },
 ];

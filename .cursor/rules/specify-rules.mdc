@@ -1,0 +1,35 @@
+# vue-vben-admin Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2025-11-19
+
+## Active Technologies
+- TypeScript 5.x, Node.js (H3/Nitro) (003-unify-table-response-format)
+- N/A (mock 服务，内存数据) (003-unify-table-response-format)
+- N/A (UI 配置修改) (004-bom-table-ui-optimization)
+- N/A (UI-only changes, no data persistence) (005-export-dialog-ui)
+
+- TypeScript 5.x, Vue 3.5+, JavaScript (ES2020+) (001-edi-backend)
+
+## Project Structure
+
+```text
+src/
+tests/
+```
+
+## Commands
+
+npm test && npm run lint
+
+## Code Style
+
+TypeScript 5.x, Vue 3.5+, JavaScript (ES2020+): Follow standard conventions
+
+## Recent Changes
+- 005-export-dialog-ui: Added TypeScript 5.x, Vue 3.5+, JavaScript (ES2020+)
+- 004-bom-table-ui-optimization: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
+- 004-bom-table-ui-optimization: Added TypeScript 5.x, Vue 3
+
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->

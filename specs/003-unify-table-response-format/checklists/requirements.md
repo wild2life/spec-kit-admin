@@ -1,4 +1,4 @@
-# Specification Quality Checklist: Material Master Data Page
+# Specification Quality Checklist: 统一 Mock 服务表格数据返回格式
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2025-11-19
@@ -29,22 +29,10 @@
 - [x] Feature meets measurable outcomes defined in Success Criteria
 - [x] No implementation details leak into specification
 
-## Feature-Specific Validation
-
-- [x] Table enhancements (checkbox column, fixed columns) are specified
-- [x] Action buttons (Import, Export, Delete) above table are documented
-- [x] Import functionality details (file selection, template download) are complete
-- [x] Export functionality details (custom dialog, column selection, export modes, file name) are complete
-- [x] Delete functionality details (checkbox selection, button state, confirmation) are complete
-- [x] Date picker range presets requirement is documented (applies to any date picker fields)
-- [x] All search form fields are specified (8 fields)
-- [x] All table display columns are specified (26 columns)
-- [x] Menu structure and router path are documented
-
 ## Notes
 
-- All checklist items pass validation
 - Specification is ready for `/speckit.plan` or `/speckit.clarify`
-- No clarifications needed - all requirements are clear and testable
-- Note: Search form currently has no date picker fields, but the requirement for range presets is documented for any future date picker additions
+- All requirements are clear and testable
+- Success criteria are measurable and technology-agnostic
+- Edge cases are identified and addressed
 
